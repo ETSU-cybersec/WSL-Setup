@@ -1,0 +1,9 @@
+Download the file:
+   WSLSetup.zip
+Unzip the file
+Open PowerShell as administrator
+Run:
+   Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Open the file
+Run:
+   .\WSLInstall.ps1
