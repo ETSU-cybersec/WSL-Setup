@@ -80,5 +80,6 @@ for f in *.py *.pl; do
     ln -sf "$f" "${f%.*}"
 done
 
-
+echo 'export PATH="$HOME/john/run:$PATH"' >> ~/.bashrc
+export PATH="$HOME/john/run:$PATH"
 
