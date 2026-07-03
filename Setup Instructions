@@ -7,3 +7,25 @@ Run:
 Open the file
 Run:
    .\WSLInstall.ps1
+Once it finishes, restart your computer
+Wait for the WSL setup to launch, then when prompted, provide your desired username and password
+Once set up, simply run "WSL" in your compand prompt or in your file explorer to launch your Ubuntu
+
+For a quick setup, follow these instructions:
+Move the WSLQuickSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
+Run:
+   sudo cmod +x WSLQuickSetup.sh
+Run:
+   sudo ./WSLQuickSetup.sh
+
+For a full setup, follow these instructions:
+Move the WSLFullSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
+Run:
+   sudo cmod +x WSLFullSetup.sh
+Run:
+   sudo ./WSLFullSetup.sh
+
+To start your python virtual environment in order to be able to use pip install, use:
+   source .venv/bin/activate
+To close your virtual environment, Use:
+   deactivate
