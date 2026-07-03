@@ -14,16 +14,18 @@ Once set up, simply run "WSL" in your compand prompt or in your file explorer to
 For a quick setup, follow these instructions:
 Move the WSLQuickSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
 Run:
-   sudo cmod +x WSLQuickSetup.sh
+   sudo chmod +x WSLQuickSetup.sh
 Run:
    sudo ./WSLQuickSetup.sh
+You may be required to hit enter a few times during the setup process.
 
 For a full setup, follow these instructions:
 Move the WSLFullSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
 Run:
-   sudo cmod +x WSLFullSetup.sh
+   sudo chmod +x WSLFullSetup.sh
 Run:
    sudo ./WSLFullSetup.sh
+You may be required to hit enter a few times during the setup process.
 
 To start your python virtual environment in order to be able to use pip install, use:
    source .venv/bin/activate
