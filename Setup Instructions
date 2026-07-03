@@ -1,32 +1,39 @@
-Download the file:
-   WSLSetup.zip
-Unzip the file
-Open PowerShell as administrator
-Run:
+1. Download the files:
+   WSLInstall.ps1
+   WSLQuickSetup.sh (for a quicker setup)
+   WSLFullSetup.sh (for more tools installed)
+2. Open PowerShell as administrator
+3. Run:
    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-Open the file
-Run:
+4. Open the file
+5. Run:
    .\WSLInstall.ps1
-Once it finishes, restart your computer
-Wait for the WSL setup to launch, then when prompted, provide your desired username and password
-Once set up, simply run "WSL" in your compand prompt or in your file explorer to launch your Ubuntu
+6. Once it finishes, restart your computer
+7. Wait for the WSL setup to launch, then when prompted, provide your desired username and password
+8. Once set up, simply run "WSL" in your compand prompt or in your file explorer to launch your Ubuntu
 
-For a quick setup, follow these instructions:
-Move the WSLQuickSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
-Run:
+9. For a quick setup, follow these instructions:
+1. Move the WSLQuickSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
+2. Run:
    sudo chmod +x WSLQuickSetup.sh
-Run:
-   sudo ./WSLQuickSetup.sh
-You may be required to hit enter a few times during the setup process.
+3. Run:
+   ./WSLQuickSetup.sh
+4. Enter Your Password
+(You may be required to hit enter a few times during the setup process)
+5. Once complete, close your terminal and open a new one and everything should be set up
 
-For a full setup, follow these instructions:
-Move the WSLFullSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
-Run:
+10. For a full setup, follow these instructions:
+1. Move the WSLFullSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
+2. Run:
    sudo chmod +x WSLFullSetup.sh
-Run:
-   sudo ./WSLFullSetup.sh
-You may be required to hit enter a few times during the setup process.
+3. Run:
+   ./WSLFullSetup.sh
+4. Enter Your Password
+(You may be required to hit enter a few times during the setup process.)
+5. Once complete, close your terminal and open a new one and everything should be set up
 
+
+Extra Notes:
 To start your python virtual environment in order to be able to use pip install, use:
    source .venv/bin/activate
 To close your virtual environment, Use:
