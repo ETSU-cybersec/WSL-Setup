@@ -70,23 +70,15 @@ cd john/src
 ./configure
 make -sj"$(nproc)"
 
-echo 'alias 7z2john="perl $HOME/tools/john/run/7z2john.pl"' >> ~/.bashrc
-echo 'alias pdf2john="perl $HOME/tools/john/run/pdf2john.py"' >> ~/.bashrc
-echo 'alias androidbackup2john="perl $HOME/tools/john/run/androidbackup2john.py"' >> ~/.bashrc
-echo 'alias mac2john="perl $HOME/tools/john/run/mac2john.py"' >> ~/.bashrc
-echo 'alias mozilla2john="perl $HOME/tools/john/run/mozilla2john.py"' >> ~/.bashrc
-echo 'alias office2john="perl $HOME/tools/john/run/office2john.py"' >> ~/.bashrc
-echo 'alias openssl2john="perl $HOME/tools/john/run/openssl2john.py"' >> ~/.bashrc
-echo 'alias oracle2john="perl $HOME/tools/john/run/oracle2john.py"' >> ~/.bashrc
-echo 'alias pcap2john="perl $HOME/tools/john/run/pcap2john.py"' >> ~/.bashrc
-echo 'alias ssh2john="perl $HOME/tools/john/run/ssh2john.py"' >> ~/.bashrc
-echo 'alias telegram2john="perl $HOME/tools/john/run/telegram2john.py"' >> ~/.bashrc
-echo 'alias truecrypt2john="perl $HOME/tools/john/run/truecrypt2john.py"' >> ~/.bashrc
-echo 'alias authenticator2john="perl $HOME/tools/john/run/authenticator2john.py"' >> ~/.bashrc
-echo 'alias axcrypt2john="perl $HOME/tools/john/run/axcrypt2john.py"' >> ~/.bashrc
-echo 'alias bestcrypt2john="perl $HOME/tools/john/run/bestcrypt2john.py"' >> ~/.bashrc
-echo 'alias bitcoin2john="perl $HOME/tools/john/run/bitcoin2john.py"' >> ~/.bashrc
-echo 'alias bitlocker2john="perl $HOME/tools/john/run/bitlocker2john.py"' >> ~/.bashrc
+cd ~/john/run
+
+for f in *.py; do
+    ln -sf "$f" "${f%.py}"
+done
+
+for f in *.pl; do
+    ln -sf "$f" "${f%.pl}"
+done
 
 
 
