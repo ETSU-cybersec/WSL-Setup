@@ -33,7 +33,8 @@ binwalk \
 exiftool \
 steghide \
 hexedit \
-gdb
+gdb \
+firefox 
 
 # Full Install (Will continue to be updated)
 
