@@ -10,8 +10,10 @@
 5. Run:
    .\WSLInstall.ps1
 6. Once it finishes, restart your computer
-7. Wait for the WSL setup to launch, then when prompted, provide your desired username and password
+7. Wait for the WSL setup to launch, then when prompted, provide your desired username and password 
 8. Once set up, simply run "WSL" in your compand prompt or in your file explorer to launch your Ubuntu
+
+Note: if steps 7 and 8 did not work, try running the script again, Ubuntu may not have installed the first time
 
 9. For a quick setup, follow these instructions:
 1. Move the WSLQuickSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
@@ -26,7 +28,7 @@
 10. For a full setup, follow these instructions:
 1. Move the WSLFullSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
 2. Run:
-   sudo chmod +x WSLFullSetup.sh
+      sudo chmod +x WSLFullSetup.sh
 3. Run:
    ./WSLFullSetup.sh
 4. Enter Your Password
