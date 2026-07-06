@@ -1,49 +1,51 @@
 #!/bin/bash
 
 # Update
-apt update
+sudo apt update
 
 # Upgrade
-apt upgrade -y
+sudo apt upgrade -y
 
 # Basic Installs
-apt install unzip -y
-apt install zip -y
-apt install vim -y
-apt install curl -y
-apt install git -y
-apt install wget -y
-apt install nmap -y
-apt install openssh-client -y
-apt install openssh-server -y
-apt install net-tools -y
-apt install whois -y
-apt install tcpdump -y
-apt install wireshark -y
-apt install netcat-openbsd -y
-apt install telnet -y
-apt install hydra -y
-apt install hashcat -y
-apt install sqlmap -y
-apt install gobuster -y
-apt install dirb -y
-apt install arp-scan -y
-apt install binwalk -y
-apt install exiftool -y
-apt install steghide -y
-apt install hexedit -y
-apt install gdb -y
+sudo apt install -y \
+unzip \
+zip \
+vim \
+curl \
+git \
+wget \
+nmap \
+openssh-client \
+openssh-server \
+net-tools \
+whois \
+tcpdump \
+wireshark \
+netcat-openbsd \
+telnet \
+hydra \
+hashcat \
+sqlmap \
+gobuster \
+dirb \
+arp-scan \
+binwalk \
+exiftool \
+steghide \
+hexedit \
+gdb
 
 # Full Install (Will continue to be updated)
 
 
 # Python Setup
-apt install python3 -y
-apt install python3-pip -y
-apt install python3-venv -y
-apt install python3-dev -y
-apt install build-essential -y
-apt install pipx -y
+sudo apt install -y \
+python3 \
+python3-pip \
+python3-venv \
+python3-dev \
+build-essential \
+pipx
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -55,15 +57,16 @@ pipx install ldap3
 pipx install pwntools
 
 # John Jumbo Setup
-apt install pkg-config -y
-apt install libssl-dev -y 
-apt install zlib1g-dev -y
-apt install libbz2-dev -y
-apt install libgmp-dev -y
-apt install libpcap-dev -y
-apt install libsqlite3-dev -y
-apt install libcurl4-openssl-dev -y
-apt install yasm -y
+sudo apt install -y \
+pkg-config \
+libssl-dev \
+zlib1g-dev \
+libbz2-dev \
+libgmp-dev \
+libpcap-dev \
+libsqlite3-dev \
+libcurl4-openssl-dev \
+yasm
 
 git clone https://github.com/openwall/john.git
 cd john/src
@@ -72,10 +75,10 @@ make -sj"$(nproc)"
 
 cd ~/john/run
 
-for f in *.py; do
-    ln -sf "$f" "${f%.py}"
+for f in *.py *.pl; do
+    [ -e "$f" ] || continue
+    ln -sf "$f" "${f%.*}"
 done
 
-for f in *.pl; do
-    ln -sf "$f" "${f%.pl}"
-done
+echo 'export PATH="$HOME/john/run:$PATH"' >> ~/.bashrc
+export PATH="$HOME/john/run:$PATH"
