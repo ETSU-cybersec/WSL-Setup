@@ -4,7 +4,8 @@
    WSLFullSetup.sh (for more tools installed)
 2. Open PowerShell as administrator
 3. Run:
-   Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+   Unblock-File -Path "PATH TO YOUR FILE"
+      EG: C:\Users\Name\Downloads\WSLInstall.ps1
 4. Open the file
 5. Run:
    .\WSLInstall.ps1
