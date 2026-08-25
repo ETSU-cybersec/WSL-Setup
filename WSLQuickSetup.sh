@@ -51,7 +51,6 @@ python3 -m venv .venv
 source .venv/bin/activate
 deactivate
 
-pipx install volatility3
 pipx install sqlmap
 pipx install ldap3
 pipx install pwntools
