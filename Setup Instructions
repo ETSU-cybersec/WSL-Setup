@@ -25,15 +25,6 @@ Note: if steps 7 and 8 did not work, try running the script again, Ubuntu may no
 (You may be required to hit enter a few times during the setup process)
 5. Once complete, close your terminal and open a new one and everything should be set up
 
-10. For a full setup, follow these instructions:
-1. Move the WSLFullSetup.sh file into your WSL user directory (The directory will show up at the bottom of your file explorer)
-2. Run:
-      sudo chmod +x WSLFullSetup.sh
-3. Run:
-   ./WSLFullSetup.sh
-4. Enter Your Password
-(You may be required to hit enter a few times during the setup process.)
-5. Once complete, close your terminal and open a new one and everything should be set up
 
 
 Extra Notes:
